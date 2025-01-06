@@ -1,17 +1,17 @@
 import Header from '@/app/Components/Header'
 import { client } from '@/sanity/lib/client'
 import React from 'react'
-import { Lilita_One, VT323} from "next/font/google";
+import { Lilita_One,} from "next/font/google";
 import { IPost } from '../../../Utils/Interface'
 import Link from 'next/link';
 import { PortableText } from 'next-sanity';
 import Image from 'next/image';
 import { urlFor } from '@/sanity/lib/image';
 
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 const lilitaFont = Lilita_One ( { weight:"400", subsets:["latin"]})
-const Vt323Font = VT323 ( { weight:"400", subsets:["latin"]})
+
 
 interface Params{
     params: {
@@ -77,10 +77,10 @@ export default page;
 
 const myPortableTextComponents = {
   types: {
-    image: ({ value }:any) => <Image src={urlFor(value).url()} alt='image' width={700} height={700} />,
+    image: ({ value }: { value: any }) => <Image src={urlFor(value).url()} alt='image' width={700} height={700} />,
     
 }
 }
 
-
+/* eslint-enable @typescript-eslint/no-explicit-any */
 
