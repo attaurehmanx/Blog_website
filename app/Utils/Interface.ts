@@ -4,7 +4,7 @@ export interface IPost {
     slug: { current: string};
     publishedAt: string,
     excerpt: string,
-    body: any,
+    body: Array<any>,
     tags: Array<Tag>,
     _id: string,
 }
